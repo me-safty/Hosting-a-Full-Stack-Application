@@ -71,4 +71,4 @@ create `.circleci/config.yml` file
 and make the configuration steps for install dependencies, build for front-end and api and Deploy the app
 then push it in github repo and open circle ci for deploy the app
 
-and see the screenshots in docs dir
+and see the screenshots in screenshots dir
