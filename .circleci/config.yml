@@ -47,8 +47,8 @@ jobs:
     steps:
       - node/install:
           node-version: '14.15' 
-      - eb/setup
       - aws-cli/setup
+      - eb/setup
       - checkout
       - run:
           name: Deploy App
@@ -64,7 +64,7 @@ workflows:
           filters:
             branches:
               only:
-                - master
+                - main
           type: approval
           requires:
             - build
