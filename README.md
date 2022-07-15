@@ -3,7 +3,7 @@
 ## the link of hosted working Front-End Application
 
 ```
-http://safty-bucket-1.s3-website-us-east-1.amazonaws.com/
+http://safty-bucket-1.s3-website-us-east-1.amazonaws.com
 ```
 
 # Udagram
