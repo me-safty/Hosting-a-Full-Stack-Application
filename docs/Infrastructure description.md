@@ -1,27 +1,20 @@
 # infrastructure
 
-## App dependencies
-
-- bcryptjs
-- jsonwebtoken
-- dotenv
-- email-validator
-- express
-- pg
-- sequelize
-- angular
-- jasmine
-- eslint
-- codelyzer
-- karma
-
 ## RDS infrastructure
+
+Amazon Relational Database Service (Amazon RDS) is a collection of managed services that makes it simple to set up, operate, and scale databases in the cloud.
+
+### get started
 
 first create database,
 the type of database is postgres
 and make templates free tier
 
 ## S3 infrastructure
+
+Amazon Simple Storage Service (Amazon S3) is an object storage service that offers industry-leading scalability, data availability, security, and performance. 
+
+### get started
 
 first create bucket from cli
 make aws configure and run the following command
@@ -53,6 +46,12 @@ then edit bucket Policy like the following json file
 
 ## Elastic Beanstalk infrastructure
 
+AWS Elastic Beanstalk is an easy-to-use service for deploying and scaling web applications and services developed with Java, .NET, PHP, Node.js, Python, Ruby, Go, and Docker on familiar servers such as Apache, Nginx, Passenger, and IIS.
+
+You can simply upload your code and Elastic Beanstalk automatically handles the deployment, from capacity provisioning, load balancing, auto-scaling to application health monitoring.
+
+### get started
+
 first create a repository with the eb init command
 
 ```
@@ -64,11 +63,3 @@ then create an environment running a sample application with the eb create comma
 ```
 eb create aws-circle-ci-api-dev
 ```
-
-## Pipeline infrastructure
-
-create `.circleci/config.yml` file
-and make the configuration steps for install dependencies, build for front-end and api and Deploy the app
-then push it in github repo and open circle ci for deploy the app
-
-and see the screenshots in screenshots dir

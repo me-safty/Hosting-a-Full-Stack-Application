@@ -1,5 +1,10 @@
 # Hosting a Full-Stack Application
 
+## you will found pipeline diagram in:
+```
+./pipeline diagram
+```
+
 ## the link of hosted working Front-End Application
 
 ```
