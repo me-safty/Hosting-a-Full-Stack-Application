@@ -51,23 +51,15 @@ jobs:
       - eb/setup
       - checkout
       - run:
-          name: Set env
-          # TODO: Install, build, deploy in both apps
-          command: |
-            echo $PORT
-            echo $AWS_BUCKET
-            echo $DB_PORT
-            echo $JWT_SECRET
-            echo $POSTGRES_DB
-            echo $POSTGRES_HOST
-            echo $POSTGRES_PASSWORD
-            echo $POSTGRES_USERNAME
-            eb setenv PORT=$PORT AWS_BUCKET=$AWS_BUCKET DB_PORT=$DB_PORT JWT_SECRET=$JWT_SECRET POSTGRES_DB=$POSTGRES_DB POSTGRES_HOST=$POSTGRES_HOST POSTGRES_PASSWORD=$POSTGRES_PASSWORD POSTGRES_USERNAME=$POSTGRES_USERNAME	
-      - run:
           name: Deploy App
           # TODO: Install, build, deploy in both apps
           command: |
             npm run deploy
+      - run:
+          name: Set env
+          # TODO: Install, build, deploy in both apps
+          command: |
+            eb setenv PORT=$PORT AWS_BUCKET=$AWS_BUCKET DB_PORT=$DB_PORT JWT_SECRET=$JWT_SECRET POSTGRES_DB=$POSTGRES_DB POSTGRES_HOST=$POSTGRES_HOST POSTGRES_PASSWORD=$POSTGRES_PASSWORD POSTGRES_USERNAME=$POSTGRES_USERNAME	
             
 workflows:
   udagram:
