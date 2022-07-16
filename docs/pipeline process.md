@@ -6,14 +6,20 @@ we use in the environment :
 - aws-elastic-beanstalk@2.0.1
 
 jobs :
-  we need for jobs node-version: '14.15'
-  and we have tow jobs :
-  - build
+
+ we need for jobs :
+  - node-version: '14.15' 
+ 
+ and we have tow jobs :
+  - build:
+  
     in the build we run scripts that install the dependencies and build for front-end and api
-  - deploy
+  - deploy:
+  
     in the deploy we run scripts that deploy front-end and api
 
 workflows :
+
   we need for workflows :
   - node-version: '14.15' 
   - aws-cli/setup
@@ -21,10 +27,13 @@ workflows :
 
   the workflows we have :
   - build 
+  
     the build with filter that allow for main branche only to build 
-  - hold 
+  - hold
+   
     the hold of type approval with filter that allow for main branche only to run it and require build
   - deploy
+  
     the deploy that require hold to run deploy job 
 
 ### get started
