@@ -54,13 +54,8 @@ jobs:
           name: Deploy App
           # TODO: Install, build, deploy in both apps
           command: |
-            npm run deploy
-      - run:
-          name: Set env
-          # TODO: Install, build, deploy in both apps
-          command: |
             eb setenv PORT=$PORT AWS_BUCKET=$AWS_BUCKET DB_PORT=$DB_PORT JWT_SECRET=$JWT_SECRET POSTGRES_DB=$POSTGRES_DB POSTGRES_HOST=$POSTGRES_HOST POSTGRES_PASSWORD=$POSTGRES_PASSWORD POSTGRES_USERNAME=$POSTGRES_USERNAME	
-            
+            npm run deploy
 workflows:
   udagram:
     jobs:
